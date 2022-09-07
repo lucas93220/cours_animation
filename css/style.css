@@ -1,0 +1,204 @@
+/*
+css reset
+*/
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+@keyframes color_screen{
+    0%{
+        background-color: #fff;
+    }
+   20%{
+        background-color: #222;
+    }
+    30%{
+        background-color: rgb(72, 61, 230);
+    }
+    60%{
+        background-color: rgb(239, 14, 14);
+    }
+    100%{
+        background-color: #fff;
+    }
+}
+body{
+    font : 1.6rem sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    color: #fff;
+    animation: color_screen 10s linear infinite alternate;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,figure,p,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+a,button{
+    text-decoration: none;
+    color: #222;
+    border: 0;
+    padding: 0;
+}
+
+button{
+    background: none;
+    color: #fff;
+}
+
+:root{
+    --color-default:#222;
+}
+
+/*Theme*/
+header h1{
+    line-height: 7.0rem;
+    text-align: center;
+    animation: main_title .2s linear 5 alternate-reverse;
+    width: 40rem;
+    margin: 0 auto;
+}
+@keyframes main_title {
+    from{
+        transform: scale(1);
+        color: rgb(255,0,0);
+        opacity: 1;
+    }
+    to{
+        transform: scale(2);
+        color: #fff;
+        opacity: .5;
+    }
+}
+.material-symbols-outlined{
+    margin-right: .5rem;
+}
+
+main{
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+main figure{
+    display: inline-block;
+    width: calc(100% / 3 - 1rem);
+    text-align: center;
+}
+main figure :nth-child(2){
+    margin: 0 1rem;
+}
+main figure figcaption{
+    background-color: #fff;
+    color: #222;
+    line-height: 4rem;
+}
+
+main button{
+    display: block;
+    width: 25rem;
+    line-height: 4.5rem;
+    text-align: center;
+    border: solid .1rem #222;
+    margin: 2rem auto;
+    font-size: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+figure .logo-1{
+    animation: logo_1 6s linear infinite;
+    animation-delay: 5s;
+}
+@keyframes logo_1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+figure .logo-2{
+    animation: logo_2 1s linear 8 alternate;
+    animation-delay: 10s;
+}
+@keyframes logo_2{
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(2);
+        opacity: .5;
+    }
+    40%{
+        transform: rotate(-360deg);
+        opacity: .8;
+    }
+    60%{
+        transform: translateY(-4rem);
+        opacity: 1;
+    }
+    70%{
+        transform: rotate(360deg);
+    }
+}
+
+figure .logo-3{
+    animation: logo_3 1s linear infinite alternate;
+    animation-delay: 15s;
+}
+@keyframes logo_3 {
+    0%{
+        transform: skew(20deg, 20deg);
+    }
+    20%{
+        transform: skew(-20deg, -20deg);
+    }
+    30%{
+        transform: skew(-20deg, -20deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    60%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+main button:hover{
+    animation: button_anim 0.3s linear 5 alternate-reverse; 
+}
+@keyframes button_anim {
+    from{
+        transform: scaleX(1);
+        opacity: 1;
+        background: none;
+    }
+    to{
+        transform: scaleX(2);
+        letter-spacing: .5rem;
+        opacity: 0.2;
+        background-color: #fff;
+        color: #222;
+    }
+}
+footer *{
+    text-align: center;
+}
+
